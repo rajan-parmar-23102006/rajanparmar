@@ -126,7 +126,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">GitHub</p>
-                    <p className="text-white font-medium">@rajanparmar</p>
+                    <p className="text-white font-medium">rajan-parmar-23102006</p>
                   </div>
                 </a>
               )}

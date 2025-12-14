@@ -47,8 +47,5 @@ export const skills = [
     name: "Git & GitHub",
     category: "Tools",
   },
-  {
-    name: "Vite",
-    category: "Tools",
-  },
+  // Vite removed
 ];
