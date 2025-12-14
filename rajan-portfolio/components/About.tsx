@@ -1,8 +1,10 @@
 "use client";
 
+
 import { motion } from "framer-motion";
 import SectionWrapper from "./ui/SectionWrapper";
 import { personalInfo } from "@/data/personalInfo";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -19,10 +21,14 @@ export default function About() {
           <div className="relative w-80 h-80 mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-2xl opacity-30 animate-pulse" />
             <div className="relative w-full h-full rounded-full border-4 border-cyan-500 overflow-hidden bg-gray-800">
-              {/* Placeholder - Replace with your image */}
-              <div className="w-full h-full flex items-center justify-center text-gray-600 text-6xl font-bold">
-                RP
-              </div>
+              <Image
+                src="/personalimage.jpg"
+                alt="Profile"
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="320px"
+                priority
+              />
             </div>
           </div>
         </motion.div>
