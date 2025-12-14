@@ -15,7 +15,7 @@ export const projects = [
     description: "Connect learners and skill sharers in a collaborative marketplace. Users can teach and learn skills through interactive sessions.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     liveLink: "#", // Replace with real link
-    githubLink: "", // No code shown
+    githubLink: "https://github.com/rajan-parmar-23102006/skill-swap", // No code shown
     featured: true,
     gradient: "from-cyan-500 to-blue-500",
   },
@@ -25,7 +25,7 @@ export const projects = [
     description: "Comprehensive platform for managing airport operations including flight scheduling, passenger management, and real-time updates.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     liveLink: "#", // Replace with real link
-    githubLink: "",
+    githubLink: "https://github.com/rajan-parmar-23102006/IMP-Airport-management-system-",
     featured: true,
     gradient: "from-green-500 to-teal-500",
   },
@@ -41,9 +41,9 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Jarvis AI",
-    description: "Personal AI assistant inspired by Iron Man's Jarvis. Voice-controlled system for automation and smart home integration.",
-    tech: ["Python", "AI/ML", "Speech Recognition"],
+    title: "Github Explorer",
+    description: "Github explorer is a web application that allows users to search for GitHub profiles and view their repositories, followers, and other details in an organized manner.",
+    tech: ["HTML", "CSS", "JavaScript"],
     liveLink: "",
     githubLink: "https://github.com/rajanparmar/jarvis", // Show code only
     featured: false,
