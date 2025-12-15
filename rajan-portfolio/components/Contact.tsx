@@ -5,6 +5,7 @@ import SectionWrapper from "./ui/SectionWrapper";
 import { personalInfo } from "@/data/personalInfo";
 import { Mail, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,11 +13,34 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // You can add email service integration here later
-    alert("Thanks for reaching out! I'll get back to you soon.");
+    setStatus("sending");
+
+    try {
+      const result = await emailjs.send(
+        'service_71xqucb',      // Your Service ID
+        'template_fz71wpc',     // Your Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'uaBHbUFX3ITHy6gsv'    // Your Public Key
+      );
+
+      if (result.status === 200) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   return (
@@ -48,6 +72,7 @@ export default function Contact() {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-cyan-500 focus:outline-none text-white"
                   placeholder="Your name"
+                  disabled={status === "sending"}
                 />
               </div>
 
@@ -60,6 +85,7 @@ export default function Contact() {
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-cyan-500 focus:outline-none text-white"
                   placeholder="your.email@example.com"
+                  disabled={status === "sending"}
                 />
               </div>
 
@@ -72,17 +98,41 @@ export default function Contact() {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-cyan-500 focus:outline-none text-white resize-none"
                   placeholder="Your message..."
+                  disabled={status === "sending"}
                 />
               </div>
 
               <motion.button
                 type="submit"
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 rounded-lg transition-colors duration-300"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className={`w-full font-medium py-3 rounded-lg transition-colors duration-300 ${
+                  status === "sending" 
+                    ? "bg-gray-600 cursor-not-allowed" 
+                    : status === "success"
+                    ? "bg-green-500 hover:bg-green-600"
+                    : status === "error"
+                    ? "bg-red-500 hover:bg-red-600"
+                    : "bg-cyan-500 hover:bg-cyan-600"
+                } text-white`}
+                whileHover={{ scale: status === "idle" ? 1.02 : 1 }}
+                whileTap={{ scale: status === "idle" ? 0.98 : 1 }}
+                disabled={status === "sending"}
               >
-                Send Message
+                {status === "sending" && "Sending..."}
+                {status === "success" && "✓ Message Sent!"}
+                {status === "error" && "✗ Failed to Send"}
+                {status === "idle" && "Send Message"}
               </motion.button>
+
+              {status === "success" && (
+                <p className="text-green-400 text-center text-sm">
+                  Thanks! I'll get back to you soon.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-red-400 text-center text-sm">
+                  Something went wrong. Please try again or email me directly.
+                </p>
+              )}
             </form>
           </motion.div>
 
