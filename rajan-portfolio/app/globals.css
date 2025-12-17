@@ -36,3 +36,23 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #0891b2;
 }
+
+/* Gradient Animation for Hero Name */
+@layer utilities {
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 4s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
