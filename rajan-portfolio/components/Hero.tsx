@@ -133,7 +133,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             className="inline-flex"
           >
-            <a href="/resume.pdf" download="RajanParmar_resume.pdf">
+            <a href="/RajanParmar_resume.pdf" download="RajanParmar_resume.pdf">
               <Button variant="secondary">Download Resume</Button>
             </a>
           </motion.div>
