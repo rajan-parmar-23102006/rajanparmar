@@ -16,8 +16,20 @@ export const skills = [
     category: "Frontend",
   },
   {
+    name: "MongoDB",
+    category: "Database",
+  },
+  {
+    name: "Express",
+    category: "Backend",
+  },
+  {
     name: "React",
     category: "Frontend",
+  },
+  {
+    name: "Node.js",
+    category: "Backend",
   },
   {
     name: "Next.js",
@@ -26,18 +38,6 @@ export const skills = [
   {
     name: "Tailwind CSS",
     category: "Frontend",
-  },
-  {
-    name: "Node.js",
-    category: "Backend",
-  },
-  {
-    name: "Express",
-    category: "Backend",
-  },
-  {
-    name: "MongoDB",
-    category: "Database",
   },
   {
     name: "Python",
