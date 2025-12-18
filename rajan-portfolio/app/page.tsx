@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience"; // ← Add this import
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Experience /> {/* ← Add this component */}
       <Contact />
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
