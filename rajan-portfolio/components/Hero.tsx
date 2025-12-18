@@ -8,10 +8,10 @@ import { personalInfo } from "@/data/personalInfo";
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background Gradient */}
+      {/* Animated Background Gradient
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-blue-500/10 animate-pulse" />
-      </div>
+      </div> */}
 
       {/* Floating Animated Orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
