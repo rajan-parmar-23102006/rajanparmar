@@ -140,29 +140,6 @@ export default function Hero() {
         </motion.div>
 
       </div>
-
-      {/* Enhanced Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer"
-        animate={{ y: [0, 12, 0] }}
-        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-      >
-        <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center p-2 hover:border-cyan-300 transition-colors">
-          <motion.div
-            className="w-1.5 h-3 bg-cyan-400 rounded-full"
-            animate={{
-              y: [0, 16, 0],
-              opacity: [1, 0.4, 1]
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 2,
-              ease: "easeInOut"
-            }}
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }
