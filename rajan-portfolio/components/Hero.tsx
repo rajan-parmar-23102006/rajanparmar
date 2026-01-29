@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { TypeAnimation } from 'react-type-animation';
 import Button from "./ui/Button";
 import { personalInfo } from "@/data/personalInfo";
 
@@ -73,35 +72,6 @@ export default function Hero() {
             {personalInfo.name}
           </span>
         </motion.h1>
-
-        {/* Typing Animation with Gradient */}
-        <motion.div
-          className="text-2xl md:text-4xl font-bold mb-8 h-20 flex items-center justify-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          <TypeAnimation
-            sequence={[
-              'MERN Developer',
-              2000,
-              'Full Stack Developer',
-              2000,
-              'Computer Engineering Student',
-              2000,
-              'Problem Solver',
-              2000,
-              'React Enthusiast',
-              2000,
-            ]}
-            wrapper="span"
-            speed={50}
-            className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
-            repeat={Infinity}
-            cursor={true}
-            style={{ display: 'inline-block' }}
-          />
-        </motion.div>
 
         {/* Description with Fade-in */}
         <motion.p
