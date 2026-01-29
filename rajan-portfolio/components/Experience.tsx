@@ -1,46 +1,63 @@
 "use client";
 
 import SectionWrapper from "./ui/SectionWrapper";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, Award } from "lucide-react";
 
 const experiences = [
   {
     id: 1,
     type: "Internship",
-    title: "Full Stack Developer Intern",
-    company: "Tech Company Name",
-    date: "June 2024 - August 2024",
+    title: "Python Developer Intern",
+    company: "Quicksend compony",
+    date: "June 2025 - july 2025",
+    certificateLink: "https://drive.google.com/open?id=1o8gQX4gKBOotemfpEkdcOQTDUXcLUuOL&authuser=0",
     responsibilities: [
-      "Developed and maintained web applications using MERN stack",
-      "Collaborated with cross-functional teams to deliver high-quality solutions",
-      "Implemented RESTful APIs and integrated third-party services",
-      "Improved application performance by 30% through code optimization",
+      "Developed and maintained Python-based applications with a focus on AI and automation and build real life AI projects.",
+      "Built an AI chatbot using Python by applying core concepts such as functions, loops, and logic building.",
+      "Worked with basic machine learning and NLP concepts to enhance chatbot responses and accuracy.",
+      "Collaborated with the team to test, debug, and improve AI-driven features for better performance.",
     ],
   },
   {
     id: 2,
-    type: "Freelance",
-    title: "Frontend Developer",
-    company: "Freelance",
-    date: "January 2024 - May 2024",
+    type: "hackathon",
+    title: "machine learning developer",
+    company: "DAIICT Hackathon",
+    date: "January 2026 - May 2026",
+    certificateLink: "https://www.linkedin.com/posts/rajan-parmar-458978301_hackathon-daiict-innovation-activity-7416688976557858817-p56W?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE01K4QB9rHCHEu09g5Ck6yeJ-CBI4WVnLI", // Replace with actual certificate link
     responsibilities: [
-      "Built responsive websites for clients using React and Tailwind CSS",
-      "Designed and implemented user-friendly interfaces",
-      "Worked directly with clients to understand requirements",
-      "Delivered 5+ projects on time and within budget",
+      "Built an Early Disease Detection System using machine learning.",
+      "Preprocessed and prepared data for effective model training.",
+      "Trained and tested ML models to improve early prediction accuracy.",
+      "Worked with the team to optimize model performance and results."
     ],
   },
   {
     id: 3,
-    type: "Project",
-    title: "Open Source Contributor",
-    company: "GitHub Community",
-    date: "2023 - Present",
+    type: "certification",
+    title: "Green Skills & Artificial Intelligence",
+    company: "Edunet Foundation | AICTE | Shell",
+    date: "November 2025",
+    certificateLink: "https://www.linkedin.com/posts/rajan-parmar-458978301_greenskills-artificialintelligence-skills4future-activity-7409254771045629952-w_AN?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE01K4QB9rHCHEu09g5Ck6yeJ-CBI4WVnLI",
     responsibilities: [
-      "Contributed to multiple open-source projects",
-      "Fixed bugs and implemented new features",
-      "Collaborated with developers worldwide",
-      "Improved code quality and documentation",
+      "Completed a foundation course on Green Skills and Artificial Intelligence.",
+      "Learned core AI concepts and their applications in sustainable development.",
+      "Gained exposure to environmentally responsible technology practices.",
+      "Participated in collaborative learning and practical AI-based activities."
+    ],
+  },
+  {
+    id: 4,
+    type: "hackathon",
+    title: "TechNova Hackathon – 2nd Position",
+    company: "Gyannanjari Innovation University | Google Student Ambassador",
+    date: "November 2025",
+    certificateLink: "https://www.linkedin.com/posts/rajan-parmar-458978301_technovahackathon-achievement-hackathon-activity-7408052270095015936-erfb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE01K4QB9rHCHEu09g5Ck6yeJ-CBI4WVnLI",
+    responsibilities: [
+      "Secured 2nd position in TechNova Hackathon 2025 among multiple competing teams.",
+      "Designed and presented an innovative technical solution under time constraints.",
+      "Collaborated with team members to implement and refine the project effectively.",
+      "Demonstrated strong problem-solving, teamwork, and presentation skills."
     ],
   },
 ];
@@ -92,7 +109,7 @@ export default function Experience() {
                     </div>
 
                     {/* Responsibilities */}
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-5">
                       {exp.responsibilities.map((item, i) => (
                         <li
                           key={i}
@@ -103,6 +120,19 @@ export default function Experience() {
                         </li>
                       ))}
                     </ul>
+
+                    {/* View Certificate Button */}
+                    {exp.certificateLink && (
+                      <a
+                        href={exp.certificateLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-lg border border-cyan-500/30 hover:bg-cyan-500/30 hover:border-cyan-400 transition-all duration-300"
+                      >
+                        <Award className="w-4 h-4" />
+                        View post
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
