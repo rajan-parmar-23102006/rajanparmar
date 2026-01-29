@@ -11,17 +11,17 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Skill-Swap Platform",
+    title: "Skill-Swap Platform (major project)",
     description: "Connect learners and skill sharers in a collaborative marketplace. Users can teach and learn skills through interactive sessions.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
-    liveLink: "#", // Replace with real link
-    githubLink: "https://github.com/rajan-parmar-23102006/skill-swap", // No code shown
+    liveLink: "https://skillsharex.vercel.app",
+    githubLink: "https://github.com/rajan-parmar-23102006/skill-swap",
     featured: true,
     gradient: "from-cyan-500 to-blue-500",
   },
   {
     id: 3,
-    title: "Airport Management System",
+    title: "Airport Management System (hackathon project)",
     description: "Comprehensive platform for managing airport operations including flight scheduling, passenger management, and real-time updates.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     liveLink: "#", // Replace with real link

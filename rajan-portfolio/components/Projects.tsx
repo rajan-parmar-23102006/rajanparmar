@@ -50,8 +50,19 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  {/* Only GitHub Link Button for every project */}
+                  {/* Project Links */}
                   <div className="flex gap-4">
+                    {project.liveLink && project.liveLink !== "#" && (
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
+                        <ExternalLink size={18} />
+                        <span className="text-sm font-medium">Live Demo</span>
+                      </a>
+                    )}
                     <a
                       href={project.githubLink || "#"}
                       target="_blank"
