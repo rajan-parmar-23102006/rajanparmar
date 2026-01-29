@@ -1,7 +1,7 @@
 "use client";
 
 import SectionWrapper from "./ui/SectionWrapper";
-import { Briefcase, Calendar, Award } from "lucide-react";
+import { Briefcase, Calendar, Award, Clock } from "lucide-react";
 
 const experiences = [
   {
@@ -137,6 +137,29 @@ export default function Experience() {
                 </div>
               </div>
             ))}
+
+            {/* Coming Soon Card */}
+            <div className="relative">
+              {/* Timeline Dot */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gray-500 rounded-full border-4 border-gray-950 z-10 shadow-lg shadow-gray-500/50"></div>
+
+              {/* Coming Soon Card - Centered */}
+              <div className="ml-auto mr-auto max-w-2xl">
+                <div className="bg-gray-900/80 border border-dashed border-gray-600 rounded-xl p-8 mt-8 text-center">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center">
+                      <Clock className="w-8 h-8 text-cyan-400 animate-pulse" />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-400 mb-2">
+                    More Experiences are Coming Soon...
+                  </h3>
+                  <p className="text-gray-500 text-sm">
+                    Other experiences, internships & achievements are on the way. Stay tuned!
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
