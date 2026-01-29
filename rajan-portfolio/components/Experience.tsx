@@ -59,9 +59,6 @@ export default function Experience() {
 
         {/* Vertical Timeline */}
         <div className="relative">
-          {/* Center Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-cyan-400 via-cyan-500 to-transparent"></div>
-
           {/* Experience Cards */}
           <div className="space-y-12">
             {experiences.map((exp, index) => (
