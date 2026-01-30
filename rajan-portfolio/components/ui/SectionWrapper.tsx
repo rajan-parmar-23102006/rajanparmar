@@ -14,10 +14,11 @@ export default function SectionWrapper({ children, id, className = "" }: Section
     <motion.section
       id={id}
       className={`min-h-screen flex items-center justify-center px-6 py-20 ${className}`}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.05, margin: "100px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      style={{ willChange: "opacity, transform" }}
     >
       {children}
     </motion.section>

@@ -19,6 +19,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Fallback for devices with reduced motion preference or animation issues */
+@media (prefers-reduced-motion: reduce) {
+  section {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
