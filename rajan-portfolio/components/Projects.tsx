@@ -7,7 +7,7 @@ import { ExternalLink, Github } from "lucide-react";
 
 export default function Projects() {
   return (
-    <SectionWrapper id="projects" className="bg-gray-900/50">
+    <SectionWrapper id="projects" className="bg-black/30">
       <div className="max-w-7xl w-full">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-16"
@@ -28,7 +28,7 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className="group relative h-full bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 overflow-hidden">
+              <div className="group relative h-full bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 overflow-hidden">
                 {/* Gradient Background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 <div className="relative z-10">

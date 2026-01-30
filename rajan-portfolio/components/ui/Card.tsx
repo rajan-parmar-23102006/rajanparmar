@@ -14,7 +14,7 @@ export default function Card({ children, className, hover = true }: CardProps) {
   return (
     <motion.div
       className={cn(
-        "bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6",
+        "bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6",
         className
       )}
       initial={{ opacity: 0, scale: 0.9 }}
