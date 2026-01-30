@@ -70,7 +70,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-950/80 border border-gray-700/50 rounded-lg focus:border-cyan-500 focus:outline-none text-white backdrop-blur-sm"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-cyan-500 focus:outline-none text-white"
                   placeholder="Your name"
                   disabled={status === "sending"}
                 />
@@ -83,7 +83,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-950/80 border border-gray-700/50 rounded-lg focus:border-cyan-500 focus:outline-none text-white backdrop-blur-sm"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-cyan-500 focus:outline-none text-white"
                   placeholder="your.email@example.com"
                   disabled={status === "sending"}
                 />
@@ -96,7 +96,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-950/80 border border-gray-700/50 rounded-lg focus:border-cyan-500 focus:outline-none text-white resize-none backdrop-blur-sm"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-cyan-500 focus:outline-none text-white resize-none"
                   placeholder="Your message..."
                   disabled={status === "sending"}
                 />

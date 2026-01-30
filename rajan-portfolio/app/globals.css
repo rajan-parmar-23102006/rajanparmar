@@ -13,8 +13,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom right, #111827, #030712, #000000);
-  background-attachment: fixed;
+  background-color: #0f172a;
   color: #ffffff;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
@@ -34,7 +33,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #1e293b;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -63,55 +62,5 @@ body {
     100% {
       background-position: 0% 50%;
     }
-  }
-}
-
-/* ===== PERFORMANCE OPTIMIZATIONS ===== */
-
-/* Mobile Performance Optimization */
-@media (max-width: 767px) {
-  /* Reduce blur intensity on mobile for better performance */
-  .blur-3xl {
-    filter: blur(40px) !important;
-  }
-  
-  /* Hardware acceleration for smoother animations */
-  section {
-    transform: translateZ(0);
-    will-change: transform;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  /* Optimize motion elements */
-  [class*="motion"] {
-    will-change: opacity, transform;
-  }
-}
-
-/* GPU acceleration for animated elements */
-.blur-3xl {
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-/* Optimize images and media */
-img, video {
-  content-visibility: auto;
-}
-
-/* Reduce animation complexity for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  
-  .blur-3xl {
-    animation: none !important;
   }
 }

@@ -42,7 +42,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-black/90 backdrop-blur-lg shadow-lg border-b border-gray-800/50"
+            ? "bg-gray-900/95 backdrop-blur-lg shadow-lg border-b border-gray-800"
             : "bg-transparent"
         }`}
       >
@@ -85,12 +85,12 @@ export default function Navbar() {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/90 z-40 md:hidden"
+            className="fixed inset-0 bg-black/80 z-40 md:hidden"
             onClick={() => setIsOpen(false)}
           />
 
           {/* Menu Panel */}
-          <div className="fixed top-0 right-0 bottom-0 w-[280px] bg-gray-950 border-l border-gray-800/50 z-40 md:hidden shadow-2xl">
+          <div className="fixed top-0 right-0 bottom-0 w-[280px] bg-gray-900 border-l border-gray-800 z-40 md:hidden shadow-2xl">
             {/* Menu Content */}
             <div className="flex flex-col h-full pt-24 px-8">
               {/* Navigation Links */}

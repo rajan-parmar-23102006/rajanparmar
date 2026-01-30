@@ -81,11 +81,11 @@ export default function Experience() {
             {experiences.map((exp, index) => (
               <div key={exp.id} className="relative">
                 {/* Timeline Dot */}
-                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-cyan-400 rounded-full border-4 border-black z-10 shadow-lg shadow-cyan-400/50"></div>
+                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-cyan-400 rounded-full border-4 border-gray-950 z-10 shadow-lg shadow-cyan-400/50"></div>
 
                 {/* Experience Card - Centered */}
                 <div className="ml-auto mr-auto max-w-2xl">
-                  <div className="bg-gray-950/80 border border-cyan-400/30 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 group md:mt-8 backdrop-blur-sm">
+                  <div className="bg-gray-900/80 border border-cyan-400/30 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/20 group md:mt-8">
                     {/* Type Badge */}
                     <div className="flex justify-between items-start mb-4">
                       <span className="inline-block px-4 py-1.5 bg-cyan-500/20 text-cyan-400 text-sm font-semibold rounded-full border border-cyan-500/30">
@@ -141,11 +141,11 @@ export default function Experience() {
             {/* Coming Soon Card */}
             <div className="relative">
               {/* Timeline Dot */}
-              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gray-500 rounded-full border-4 border-black z-10 shadow-lg shadow-gray-500/50"></div>
+              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gray-500 rounded-full border-4 border-gray-950 z-10 shadow-lg shadow-gray-500/50"></div>
 
               {/* Coming Soon Card - Centered */}
               <div className="ml-auto mr-auto max-w-2xl">
-                <div className="bg-gray-950/80 border border-dashed border-gray-700/50 rounded-xl p-8 md:mt-8 text-center backdrop-blur-sm">
+                <div className="bg-gray-900/80 border border-dashed border-gray-600 rounded-xl p-8 md:mt-8 text-center">
                   <div className="flex justify-center mb-4">
                     <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center">
                       <Clock className="w-8 h-8 text-cyan-400 animate-pulse" />
