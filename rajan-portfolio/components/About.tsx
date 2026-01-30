@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <SectionWrapper id="about" className="bg-gray-900/50">
+    <SectionWrapper id="about" className="bg-black/30">
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
         {/* Photo */}
         <motion.div
@@ -20,7 +20,7 @@ export default function About() {
         >
           <div className="relative w-80 h-80 mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-2xl opacity-30 animate-pulse" />
-            <div className="relative w-full h-full rounded-full border-4 border-cyan-500 overflow-hidden bg-gray-800">
+            <div className="relative w-full h-full rounded-full border-4 border-cyan-500 overflow-hidden bg-gray-950">
               <Image
                 src="/personalimage.jpg"
                 alt="Profile"
@@ -54,13 +54,13 @@ export default function About() {
 
           {/* Stats */}
           <div className="grid grid-cols-2 gap-6">
-            <div className="bg-gray-800/50 border border-cyan-500/30 rounded-lg p-4 text-center">
+            <div className="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-4 text-center backdrop-blur-sm">
               <h3 className="text-4xl font-bold text-cyan-400 mb-2">
                 {personalInfo.stats.projectsCompleted}
               </h3>
               <p className="text-gray-400">Real Projects Built</p>
             </div>
-            <div className="bg-gray-800/50 border border-cyan-500/30 rounded-lg p-4 text-center">
+            <div className="bg-gray-900/60 border border-cyan-500/30 rounded-lg p-4 text-center backdrop-blur-sm">
               <h3 className="text-4xl font-bold text-cyan-400 mb-2">
                 {personalInfo.stats.yearsExperience}
               </h3>
