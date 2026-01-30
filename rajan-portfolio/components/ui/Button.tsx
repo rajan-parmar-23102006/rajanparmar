@@ -10,6 +10,7 @@ interface ButtonProps {
   href?: string;
   onClick?: () => void;
   className?: string;
+  download?: boolean | string;
 }
 
 export default function Button({ 
@@ -17,7 +18,8 @@ export default function Button({
   variant = "primary", 
   href, 
   onClick, 
-  className 
+  className,
+  download
 }: ButtonProps) {
   const baseStyles = "px-6 py-3 rounded-lg font-medium transition-all duration-300";
   const variants = {
@@ -33,6 +35,7 @@ export default function Button({
         href={href}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        download={download}
         className={cn(baseStyles, variants[variant], className)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
