@@ -57,12 +57,12 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                className="text-gray-300 border-2 border-cyan-400/40 rounded-full px-4 py-2 hover:text-cyan-400 hover:border-cyan-400/80 hover:bg-cyan-400/10 transition-all duration-300"
               >
                 {link.name}
               </a>
@@ -94,12 +94,12 @@ export default function Navbar() {
             {/* Menu Content */}
             <div className="flex flex-col h-full pt-24 px-8">
               {/* Navigation Links */}
-              <nav className="flex-1 space-y-2">
+              <nav className="flex-1 space-y-3">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
-                    className="block py-4 px-6 text-lg font-medium text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-lg transition-colors border border-transparent hover:border-cyan-400/30"
+                    className="block py-3 px-6 text-lg font-medium text-gray-300 border-2 border-cyan-400/40 rounded-full hover:text-cyan-400 hover:bg-cyan-400/10 hover:border-cyan-400/80 transition-all duration-300"
                     onClick={handleLinkClick}
                   >
                     {link.name}

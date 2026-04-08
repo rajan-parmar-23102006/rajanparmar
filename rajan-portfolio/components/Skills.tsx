@@ -55,7 +55,7 @@ export default function Skills() {
           Tech <span className="text-cyan-400">Stack</span>
         </motion.h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-4">
           {skills.map((skill, index) => {
             const Icon = iconMap[skill.name];
             const color = colorMap[skill.name];
@@ -68,12 +68,12 @@ export default function Skills() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
               >
-                <Card className="text-center group cursor-pointer">
+                <Card className="text-center group cursor-pointer p-3 sm:p-4">
                   {Icon && (
-                    <Icon className={`text-5xl mx-auto mb-4 ${color} group-hover:scale-110 transition-transform duration-300`} />
+                    <Icon className={`text-3xl sm:text-4xl mx-auto mb-3 ${color} group-hover:scale-110 transition-transform duration-300`} />
                   )}
-                  <h3 className="font-semibold text-gray-200">{skill.name}</h3>
-                  <p className="text-sm text-gray-500 mt-1">{skill.category}</p>
+                  <h3 className="font-semibold text-gray-200 text-sm sm:text-base">{skill.name}</h3>
+                  <p className="text-[11px] sm:text-xs text-gray-500 mt-1">{skill.category}</p>
                 </Card>
               </motion.div>
             );
