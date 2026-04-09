@@ -5,7 +5,7 @@ import SectionWrapper from "./ui/SectionWrapper";
 import Card from "./ui/Card";
 import { skills } from "@/data/skills";
 import { 
-  SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiNextdotjs,
+  SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiFlask,
   SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPython, 
   SiGit, SiVite
 } from "react-icons/si";
@@ -16,7 +16,7 @@ const iconMap: any = {
   "JavaScript": SiJavascript,
   "TypeScript": SiTypescript,
   "React": SiReact,
-  "Next.js": SiNextdotjs,
+  "Flask": SiFlask,
   "Tailwind CSS": SiTailwindcss,
   "Node.js": SiNodedotjs,
   "Express": SiExpress,
@@ -32,7 +32,7 @@ const colorMap: any = {
   "JavaScript": "text-yellow-400",
   "TypeScript": "text-blue-400",
   "React": "text-cyan-400",
-  "Next.js": "text-white",
+  "Flask": "text-amber-300",
   "Tailwind CSS": "text-cyan-300",
   "Node.js": "text-green-500",
   "Express": "text-gray-400",

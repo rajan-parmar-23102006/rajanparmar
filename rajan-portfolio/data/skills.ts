@@ -32,12 +32,12 @@ export const skills = [
     category: "Backend",
   },
   {
-    name: "Next.js",
+    name: "Tailwind CSS",
     category: "Frontend",
   },
   {
-    name: "Tailwind CSS",
-    category: "Frontend",
+    name: "Flask",
+    category: "Backend",
   },
   {
     name: "Python",
