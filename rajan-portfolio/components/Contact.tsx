@@ -21,7 +21,7 @@ export default function Contact() {
 
     try {
       const result = await emailjs.send(
-        'service_71xqucb',      // Your Service ID
+        'service_zndyxfs',      // Your Service ID
         'template_fz71wpc',     // Your Template ID
         {
           from_name: formData.name,
