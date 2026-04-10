@@ -3,14 +3,19 @@
 import { motion } from "framer-motion";
 import SectionWrapper from "./ui/SectionWrapper";
 import { projects } from "@/data/projects";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Projects() {
+  const visibleProjects = projects.filter(
+    (project) => !project.title.toLowerCase().includes("comming soon")
+  );
+
   return (
     <SectionWrapper id="projects" className="bg-black/30">
       <div className="max-w-7xl w-full">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-16"
+          className="text-4xl md:text-5xl font-bold text-center mb-14"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -18,65 +23,84 @@ export default function Projects() {
           Featured <span className="text-cyan-400">Projects</span>
         </motion.h2>
 
-        {/* Projects Grid: Always 3 per row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <div className="group relative h-full bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 overflow-hidden">
-                {/* Gradient Background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                <div className="relative z-10">
-                  {/* Removed Project Letter Icon */}
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 mb-4 line-clamp-3">
-                    {project.description}
-                  </p>
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-6">
+          {visibleProjects.map((project, index) => {
+            const cardHref = project.liveLink?.trim() || project.githubLink || "";
+            const hasLink = Boolean(cardHref && cardHref !== "#");
+
+            const cardContent = (
+              <div className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#07111d] shadow-[0_18px_60px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/40">
+                <div className="relative aspect-[4/3] bg-slate-950">
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-800" />
+                  )}
+                  <div className="absolute inset-0 bg-black/25" />
+                  <div className="absolute inset-x-0 top-0 flex justify-end p-4">
+                    <div className="rounded-full bg-black/50 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-slate-200">
+                      {project.liveLink?.trim() ? "Live" : "Code"}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-1 flex-col justify-between gap-4 p-5">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white transition-colors group-hover:text-cyan-400">
+                      {project.title}
+                    </h3>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full border border-cyan-500/30"
+                        className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-cyan-300"
                       >
-                        {tech}
+                        {tech.trim()}
                       </span>
                     ))}
                   </div>
-                  {/* Project Links */}
-                  <div className="flex gap-4">
-                    {project.liveLink && project.liveLink !== "#" && (
-                      <a
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                      >
-                        <ExternalLink size={18} />
-                        <span className="text-sm font-medium">Live Demo</span>
-                      </a>
-                    )}
-                    <a
-                      href={project.githubLink || "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors"
-                    >
-                      <Github size={18} />
-                      <span className="text-sm font-medium">Code</span>
-                    </a>
+
+                  <div className="flex items-center justify-between pt-1">
+                    <span className="text-xs uppercase text-slate-400 tracking-[0.2em]">
+                      {project.category || "Web App"}
+                    </span>
+                    <ArrowUpRight size={18} className="text-cyan-400" />
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            );
+
+            return (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+              >
+                {hasLink ? (
+                  <a
+                    href={cardHref}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="block"
+                  >
+                    {cardContent}
+                  </a>
+                ) : (
+                  <div className="block">{cardContent}</div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </SectionWrapper>
