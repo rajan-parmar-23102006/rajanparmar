@@ -50,7 +50,7 @@ export default function Projects() {
                       alt={project.title}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: project.slug === "gym-ai-chatbot" ? "contain" : "cover" }}
                       className="transition-transform duration-500 group-hover:scale-105"
                     />
                   )}

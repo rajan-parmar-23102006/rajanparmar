@@ -9,7 +9,7 @@ export const projects = [
       "GYM AI Chatbot is an intelligent fitness assistant that helps gym enthusiasts get personalised workout recommendations, nutrition advice, and answers to fitness-related queries. Built with Flask on the backend and integrated with NLTK for natural language understanding, it provides real-time conversational support for anyone looking to optimise their health journey.",
     tech: ["Flask", "React", "NLTK", "API Integration"],
     image: "/projects/gym_chatbot.png",
-    images: ["/projects/gym_chatbot.png", "/projects/gym_chatbot_2.png"],
+    images: ["/projects/gym_chatbot.png", "/projects/gym2.png"],
     liveLink: "https://gym-chatbot-website-production.up.railway.app/",
     githubLink: "https://github.com/rajan-parmar-23102006/gym-chatbot-website",
     category: "AI Chatbot",
