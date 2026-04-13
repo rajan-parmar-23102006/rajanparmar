@@ -5,75 +5,100 @@ import SectionWrapper from "./ui/SectionWrapper";
 import { projects } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Projects() {
+  // Only show projects that have a real title and slug
   const visibleProjects = projects.filter(
-    (project) => !project.title.toLowerCase().includes("comming soon")
+    (p) =>
+      p.title.toLowerCase() !== "comming soon..." &&
+      p.title.toLowerCase() !== "coming soon" &&
+      p.image !== ""
   );
 
   return (
     <SectionWrapper id="projects" className="bg-black/30">
       <div className="max-w-7xl w-full">
-        <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-14"
+
+        {/* heading */}
+        <motion.div
+          className="text-center mb-14"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          Featured <span className="text-cyan-400">Projects</span>
-        </motion.h2>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Featured <span className="text-cyan-400">Projects</span>
+          </h2>
+          <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-4" />
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-6">
+        {/* 1 col → 2 col → 3 col */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {visibleProjects.map((project, index) => {
-            const cardHref = project.liveLink?.trim() || project.githubLink || "";
-            const hasLink = Boolean(cardHref && cardHref !== "#");
+            const isClickable = Boolean(project.slug);
 
-            const cardContent = (
-              <div className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-white/10 bg-[#07111d] shadow-[0_18px_60px_rgba(0,0,0,0.18)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/40">
-                <div className="relative aspect-[4/3] bg-slate-950">
-                  {project.image ? (
+            const CardInner = (
+              <div className="flex flex-col h-full bg-[#0d1117] border border-white/[0.08] rounded-2xl overflow-hidden transition-all duration-300 group-hover:border-cyan-500/40 group-hover:-translate-y-1">
+
+                {/* image area */}
+                <div className="relative w-full aspect-[16/10] overflow-hidden bg-gradient-to-br from-[#0d1f3c] to-[#0a2a2a]">
+                  {project.image && (
                     <Image
                       src={project.image}
-                      alt={`${project.title} screenshot`}
+                      alt={project.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                      className="transition-transform duration-500 group-hover:scale-105"
                     />
-                  ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-800" />
                   )}
-                  <div className="absolute inset-0 bg-black/25" />
-                  <div className="absolute inset-x-0 top-0 flex justify-end p-4">
-                    <div className="rounded-full bg-black/50 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-slate-200">
-                      {project.liveLink?.trim() ? "Live" : "Code"}
-                    </div>
+
+                  {/* LIVE / CODE badge */}
+                  <div className="absolute top-3 right-3">
+                    {project.liveLink && project.liveLink !== "#" && project.liveLink !== "" ? (
+                      <span className="text-[11px] font-bold tracking-widest px-2.5 py-1 rounded bg-black/60 text-white border border-white/20 backdrop-blur-sm">
+                        LIVE
+                      </span>
+                    ) : project.githubLink ? (
+                      <span className="text-[11px] font-bold tracking-widest px-2.5 py-1 rounded bg-black/60 text-white border border-white/20 backdrop-blur-sm">
+                        CODE
+                      </span>
+                    ) : null}
                   </div>
                 </div>
 
-                <div className="flex flex-1 flex-col justify-between gap-4 p-5">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white transition-colors group-hover:text-cyan-400">
+                {/* footer */}
+                <div className="flex flex-col gap-3 p-4 flex-1">
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="text-white font-semibold text-[15px] leading-snug group-hover:text-cyan-400 transition-colors">
                       {project.title}
                     </h3>
+                    {isClickable && (
+                      <ArrowUpRight
+                        size={17}
+                        className="shrink-0 mt-0.5 text-gray-600 group-hover:text-cyan-400 transition-colors"
+                      />
+                    )}
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-full border border-cyan-500/20 bg-cyan-500/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.12em] text-cyan-300"
-                      >
-                        {tech.trim()}
-                      </span>
-                    ))}
-                  </div>
+                  {project.tech && project.tech.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.tech.map((t: string) => (
+                        <span
+                          key={t}
+                          className="text-[11px] px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-medium uppercase tracking-wide"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
-                  <div className="flex items-center justify-between pt-1">
-                    <span className="text-xs uppercase text-slate-400 tracking-[0.2em]">
-                      {project.category || "Web App"}
-                    </span>
-                    <ArrowUpRight size={18} className="text-cyan-400" />
-                  </div>
+                  <p className="text-[11px] text-gray-600 uppercase tracking-widest mt-auto pt-1">
+                    {project.category}
+                  </p>
                 </div>
               </div>
             );
@@ -81,27 +106,24 @@ export default function Projects() {
             return (
               <motion.div
                 key={project.id}
+                className="group"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.08 }}
+                transition={{ duration: 0.5, delay: index * 0.07 }}
               >
-                {hasLink ? (
-                  <a
-                    href={cardHref}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="block"
-                  >
-                    {cardContent}
-                  </a>
+                {isClickable ? (
+                  <Link href={`/projects/${project.slug}`} className="block h-full">
+                    {CardInner}
+                  </Link>
                 ) : (
-                  <div className="block">{cardContent}</div>
+                  <div className="h-full cursor-default">{CardInner}</div>
                 )}
               </motion.div>
             );
           })}
         </div>
+
       </div>
     </SectionWrapper>
   );
