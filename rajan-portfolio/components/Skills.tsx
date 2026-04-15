@@ -8,11 +8,7 @@ import { skills } from "@/data/skills";
 import { 
   SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiFlask,
   SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPython, 
-  SiGit, SiVite, SiPostman, SiFigma, SiVscodium
-} from "react-icons/si";
-
-import { 
-  SiNextdotjs
+  SiGit, SiVite, SiPostman, SiFigma, SiVscodium, SiMysql, SiPostgresql, SiRedis, SiNextdotjs
 } from "react-icons/si";
 
 const iconMap: Record<string, any> = {
@@ -27,10 +23,12 @@ const iconMap: Record<string, any> = {
   "Express": SiExpress,
   "MongoDB": SiMongodb,
   "Next.js": SiNextdotjs,
+  "MySQL": SiMysql,
+  "PostgreSQL": SiPostgresql,
+  "Redis": SiRedis,
   "Python": SiPython,
   "Git & GitHub": SiGit,
   "Vite": SiVite,
-  "VS Code": SiVscodium,
   "Postman": SiPostman,
   "Figma": SiFigma,
 };
@@ -47,9 +45,11 @@ const colorMap: Record<string, string> = {
   "Express": "text-gray-400",
   "MongoDB": "text-green-400",
   "Python": "text-blue-300",
+  "MySQL": "text-blue-600",
+  "PostgreSQL": "text-blue-800",
+  "Redis": "text-red-500",
   "Git & GitHub": "text-orange-600",
   "Vite": "text-purple-400",
-  "VS Code": "text-blue-400",
   "Postman": "text-orange-400",
   "Figma": "text-purple-400",
 };
