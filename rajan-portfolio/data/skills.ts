@@ -17,8 +17,6 @@ export const skills = [
   // Database
   { name: "MongoDB",      category: "Database" },
   { name: "MySQL",        category: "Database" },
-  { name: "PostgreSQL",   category: "Database" },
-  { name: "Redis",        category: "Database" },
 
   // Version Control
   { name: "Git & GitHub", category: "Version Control" },
