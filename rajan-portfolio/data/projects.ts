@@ -10,7 +10,7 @@ export const projects = [
     tech: ["Flask", "React", "NLTK", "API Integration"],
     image: "/projects/gym_chatbot.png",
     images: ["/projects/gym_chatbot.png", "/projects/gym2.png"],
-    liveLink: "https://gym-chatbot-website-production.up.railway.app/",
+    liveLink: "https://gym-chatbot-website.onrender.com/",
     githubLink: "https://github.com/rajan-parmar-23102006/gym-chatbot-website",
     category: "AI Chatbot",
     type: "Major Project",
