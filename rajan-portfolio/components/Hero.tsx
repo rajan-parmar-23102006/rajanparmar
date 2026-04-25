@@ -76,9 +76,21 @@ export default function Hero() {
         >
           Hi, I'm{" "}
           <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            {personalInfo.name}
+            Rajan Parmar
           </span>
         </motion.h1>
+
+        {/* SEO-optimized subtitle */}
+        <motion.div
+          className="mb-4"
+          initial={{ opacity: 0, y: reduceMotion ? 0 : 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: reduceMotion ? 0.3 : 0.6, delay: reduceMotion ? 0.1 : 0.2 }}
+        >
+          <h2 className="text-xl md:text-2xl text-cyan-400 font-semibold">
+            Rajan Parmar - Web Developer & Computer Engineering Student
+          </h2>
+        </motion.div>
 
         {/* Description with Fade-in */}
         <motion.p
@@ -87,9 +99,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: reduceMotion ? 0.3 : 0.6, delay: reduceMotion ? 0.1 : 0.3 }}
         >
-          4th Semester B.Tech Computer Engineering Student passionate about
-          building elegant web solutions with modern technologies. Turning ideas
-          into reality through code.
+          Rajan Parmar is a 4th Semester B.Tech Computer Engineering Student passionate about
+          building elegant web solutions with modern technologies. Rajan Parmar specializes in MERN stack development,
+          creating responsive and user-friendly applications. Explore Rajan Parmar's portfolio to see innovative projects
+          and web development expertise.
         </motion.p>
 
         {/* Buttons with Stagger Animation */}
