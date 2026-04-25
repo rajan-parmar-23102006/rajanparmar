@@ -52,6 +52,7 @@ export const projects = [
     type: "Major Project",
     year: "2025",
     featured: true,
+    unavailableMessage: "The live deployment is currently unavailable due to free tier limitations. Please contact me to view a local demonstration of the platform.",
   },
   {
     id: 4,
@@ -63,7 +64,7 @@ export const projects = [
       "A comprehensive platform for managing airport operations including flight scheduling, passenger check-in, gate assignment, and real-time status updates. Built during a hackathon with a team of 4 developers in 24 hours, it demonstrates rapid full-stack development under time pressure.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     image: "/projects/airport.png",
-    images: ["/projects/airport.png", "/projects/airport_2.png"],
+    images: ["/projects/airport.png", "/projects/airportmanagemaent.png"],
     liveLink: "#",
     githubLink:
       "https://github.com/rajan-parmar-23102006/IMP-Airport-management-system-",
@@ -82,7 +83,7 @@ export const projects = [
       "BusEase is a transportation management application that streamlines bus route management, seat booking, and schedule tracking. It features an admin dashboard for operators and a clean passenger-facing UI for finding and booking bus services in real time.",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     image: "/projects/bus_manage_sys.png",
-    images: ["/projects/bus_manage_sys.png", "/projects/bus_manage_sys_2.png"],
+    images: ["/projects/bus_manage_sys.png", "/projects/bus2.png"],
     liveLink: "https://busease-v4su.onrender.com/",
     githubLink:
       "https://github.com/rajan-parmar-23102006/corp-connect-project",

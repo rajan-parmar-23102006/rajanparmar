@@ -22,6 +22,7 @@ type Project = {
   type: string;
   year: string;
   featured: boolean;
+  unavailableMessage?: string;
 };
 
 type Props = { project: Project };
@@ -90,6 +91,17 @@ export default function ProjectDetailClient({ project }: Props) {
               Visit Website
               <ExternalLink size={13} />
             </a>
+          )}
+
+          {project.unavailableMessage && (
+            <div className="mt-4 p-4 rounded-xl border border-red-500/30 bg-red-500/10">
+              <p className="text-red-400 font-semibold text-sm">
+                {project.unavailableMessage}
+              </p>
+              <p className="text-red-400/80 text-xs mt-2">
+                Contact me at your earliest convenience to schedule a local demonstration.
+              </p>
+            </div>
           )}
         </motion.div>
 
