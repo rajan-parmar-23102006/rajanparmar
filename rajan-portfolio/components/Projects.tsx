@@ -29,13 +29,8 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold">
-            Rajan Parmar <span className="text-cyan-400">Projects</span>
+            Featured <span className="text-cyan-400">Projects</span>
           </h2>
-          <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
-            Explore Rajan Parmar's portfolio of web development projects, showcasing expertise in MERN stack,
-            JavaScript, React, and modern web technologies. Each project demonstrates Rajan Parmar's commitment
-            to creating innovative and user-friendly applications.
-          </p>
           <div className="w-16 h-0.5 bg-cyan-400 mx-auto mt-4" />
         </motion.div>
 

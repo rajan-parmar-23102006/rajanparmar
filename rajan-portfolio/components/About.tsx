@@ -43,20 +43,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             About <span className="text-cyan-400">Me</span>
           </h2>
-
-          {/* Who is Rajan Parmar Section */}
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold text-cyan-400 mb-4">
-              Who is Rajan Parmar?
-            </h3>
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              Rajan Parmar is a dedicated Computer Engineering student in his 4th semester, passionate about web development and creating innovative digital solutions. As a MERN stack developer, Rajan Parmar specializes in building modern, responsive web applications that deliver exceptional user experiences.
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              Rajan Parmar's journey in web development began with a curiosity for technology and has evolved into a comprehensive skill set encompassing front-end and back-end development. Rajan Parmar believes in writing clean, maintainable code and staying updated with the latest industry trends and best practices.
-            </p>
-          </div>
-
+          
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
             {personalInfo.description}
           </p>
