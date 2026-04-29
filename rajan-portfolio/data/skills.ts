@@ -18,9 +18,13 @@ export const skills = [
   { name: "MongoDB",      category: "Database" },
   { name: "MySQL",        category: "Database" },
 
-  // Version Control
-  { name: "Git & GitHub", category: "Version Control" },
+  // Tools and Technologies
+  { name: "Git & GitHub", category: "Tools and Technologies" },
+  { name: "Linux",        category: "Tools and Technologies" },
+  { name: "Ubuntu",       category: "Tools and Technologies" },
+  { name: "Figma",        category: "Tools and Technologies" },
 
-  // Tools
-  { name: "Figma",        category: "Tools" },
+  // Other Techs
+  { name: "C",            category: "Other Techs" },
+  { name: "C++",          category: "Other Techs" },
 ];

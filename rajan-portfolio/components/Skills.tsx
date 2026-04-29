@@ -8,7 +8,8 @@ import { skills } from "@/data/skills";
 import { 
   SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiFlask,
   SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPython, 
-  SiGit, SiVite, SiPostman, SiFigma, SiVscodium, SiMysql, SiPostgresql, SiRedis, SiNextdotjs
+  SiGit, SiVite, SiPostman, SiFigma, SiVscodium, SiMysql, SiPostgresql, SiRedis, SiNextdotjs,
+  SiC, SiCplusplus, SiLinux, SiUbuntu
 } from "react-icons/si";
 
 const iconMap: Record<string, any> = {
@@ -31,6 +32,10 @@ const iconMap: Record<string, any> = {
   "Vite": SiVite,
   "Postman": SiPostman,
   "Figma": SiFigma,
+  "C": SiC,
+  "C++": SiCplusplus,
+  "Linux": SiLinux,
+  "Ubuntu": SiUbuntu,
 };
 
 const colorMap: Record<string, string> = {
@@ -52,6 +57,10 @@ const colorMap: Record<string, string> = {
   "Vite": "text-purple-400",
   "Postman": "text-orange-400",
   "Figma": "text-purple-400",
+  "C": "text-gray-300",
+  "C++": "text-blue-500",
+  "Linux": "text-orange-500",
+  "Ubuntu": "text-orange-600",
 };
 
 const categories = [
@@ -80,16 +89,16 @@ const categories = [
     tag: "text-emerald-400",
   },
   {
-    key: "Version Control",
-    label: "Version Control",
+    key: "Tools and Technologies",
+    label: "Tools and Technologies",
     accent: "from-orange-500/20 to-red-500/10",
     border: "border-orange-500/20",
     dot: "bg-orange-400",
     tag: "text-orange-400",
   },
   {
-    key: "Tools",
-    label: "Tools",
+    key: "Other Techs",
+    label: "Other Techs",
     accent: "from-purple-500/20 to-pink-500/10",
     border: "border-purple-500/20",
     dot: "bg-purple-400",
