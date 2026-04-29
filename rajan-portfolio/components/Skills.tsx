@@ -138,7 +138,7 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: catIdx * 0.08 }}
-                className={`rounded-2xl border ${cat.border} bg-gradient-to-r ${cat.accent} p-5 md:p-6`}
+                className={`rounded-2xl border- ${cat.border} bg-gradient-to-r ${cat.accent} p-5 md:p-6`}
               >
                 {/* category header */}
                 <div className="flex items-center gap-2.5 mb-5">
