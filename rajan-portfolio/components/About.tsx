@@ -19,8 +19,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
         >
           <div className="relative w-80 h-80 mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-2xl opacity-30 animate-pulse" />
-            <div className="relative w-full h-full rounded-full border-4 border-cyan-500 overflow-hidden bg-gray-950">
+            <div className="relative w-full h-full rounded-full border-4 border-gray-800 overflow-hidden bg-gray-950">
               <Image
                 src="/personalimage.jpg"
                 alt="Profile"

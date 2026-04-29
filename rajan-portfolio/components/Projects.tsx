@@ -43,7 +43,7 @@ export default function Projects() {
               <div className="flex flex-col h-full bg-[#0d1117] border border-white/[0.08] rounded-2xl overflow-hidden transition-all duration-300 group-hover:border-cyan-500/40 group-hover:-translate-y-1">
 
                 {/* image area */}
-                <div className="relative w-full aspect-[16/10] overflow-hidden bg-gradient-to-br from-[#0d1f3c] to-[#0a2a2a]">
+                <div className="relative w-full aspect-[16/10] overflow-hidden bg-[#050505]">
                   {project.image && (
                     <Image
                       src={project.image}

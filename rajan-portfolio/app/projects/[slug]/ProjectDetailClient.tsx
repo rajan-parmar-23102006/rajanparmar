@@ -43,7 +43,7 @@ export default function ProjectDetailClient({ project }: Props) {
   ].filter((m) => m.value);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white">
+    <main className="min-h-screen bg-[#050505] text-white">
       <div className="max-w-4xl mx-auto px-5 sm:px-8 py-10 md:py-16">
 
         {/* ── Back ── */}

@@ -14,52 +14,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black" />
-
-      {/* Floating Animated Orbs - Simplified on Mobile */}
-      <motion.div
-        className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"
-        style={{ willChange: reduceMotion ? 'auto' : 'transform' }}
-        animate={
-          reduceMotion
-            ? {} // No animation on mobile
-            : {
-                x: [0, 30, 0],
-                y: [0, 50, 0],
-              }
-        }
-        transition={
-          reduceMotion
-            ? {}
-            : {
-                duration: 8,
-                repeat: Infinity,
-                ease: "linear",
-              }
-        }
-      />
-      <motion.div
-        className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
-        style={{ willChange: reduceMotion ? 'auto' : 'transform' }}
-        animate={
-          reduceMotion
-            ? {} // No animation on mobile
-            : {
-                x: [0, -40, 0],
-                y: [0, -30, 0],
-              }
-        }
-        transition={
-          reduceMotion
-            ? {}
-            : {
-                duration: 10,
-                repeat: Infinity,
-                ease: "linear",
-              }
-        }
-      />
+      <div className="absolute inset-0 bg-[#050505]" />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
