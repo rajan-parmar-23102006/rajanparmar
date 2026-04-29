@@ -89,7 +89,7 @@ export default function Hero() {
         >
           4th Semester B.Tech Computer Engineering Student passionate about
           building elegant web solutions with modern technologies. Turning ideas
-          into reality through code.
+          into reality through code with AI solutions.
         </motion.p>
 
         {/* Buttons with Stagger Animation */}
