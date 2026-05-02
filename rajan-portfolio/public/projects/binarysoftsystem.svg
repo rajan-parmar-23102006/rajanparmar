@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07111f" />
+      <stop offset="100%" stop-color="#0c2d57" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)" />
+  <rect x="60" y="60" width="1080" height="630" rx="32" fill="#091623" stroke="#2da9e3" stroke-width="4" />
+  <text x="120" y="190" font-family="Inter, sans-serif" font-size="58" font-weight="700" fill="#ffffff">Binary Soft System</text>
+  <text x="120" y="270" font-family="Inter, sans-serif" font-size="30" fill="#a8c8f5">Landing page with Tailwind CSS & Email JS</text>
+  <rect x="120" y="340" width="420" height="280" rx="18" fill="#0b1640" stroke="#2da9e3" stroke-width="3" />
+  <text x="140" y="410" font-family="Inter, sans-serif" font-size="24" fill="#83c0ff">Homepage screenshot</text>
+  <rect x="560" y="340" width="420" height="280" rx="18" fill="#0b1640" stroke="#2da9e3" stroke-width="3" />
+  <text x="580" y="410" font-family="Inter, sans-serif" font-size="24" fill="#83c0ff">Responsive layout preview</text>
+  <rect x="120" y="640" width="320" height="55" rx="12" fill="#2da9e3" />
+  <text x="160" y="680" font-family="Inter, sans-serif" font-size="20" fill="#07111f">Live Demo</text>
+</svg>

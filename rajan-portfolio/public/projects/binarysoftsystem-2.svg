@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07111f" />
+      <stop offset="100%" stop-color="#1d3d71" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg2)" />
+  <rect x="60" y="60" width="1080" height="630" rx="28" fill="#0b1b34" stroke="#19c7ff" stroke-width="4" />
+  <text x="100" y="180" font-family="Inter, sans-serif" font-size="56" font-weight="700" fill="#ffffff">Binary Soft System</text>
+  <text x="100" y="240" font-family="Inter, sans-serif" font-size="24" fill="#a0d8ff">Responsive contact & brand sections</text>
+  <g transform="translate(120,320)">
+    <rect x="0" y="0" width="460" height="240" rx="18" fill="#132540" stroke="#19c7ff" stroke-width="3" />
+    <rect x="520" y="0" width="460" height="240" rx="18" fill="#132540" stroke="#19c7ff" stroke-width="3" />
+    <text x="20" y="38" font-family="Inter, sans-serif" font-size="24" fill="#cce8ff">Service cards</text>
+    <text x="540" y="38" font-family="Inter, sans-serif" font-size="24" fill="#cce8ff">Partner brands</text>
+  </g>
+  <rect x="100" y="600" width="200" height="45" rx="14" fill="#19c7ff" />
+  <text x="120" y="632" font-family="Inter, sans-serif" font-size="18" fill="#07111f">Screenshots</text>
+</svg>
